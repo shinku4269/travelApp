@@ -46,7 +46,13 @@
   font-weight: 600;
 }
 
+/* スケジュール */
 
+.schedule_image{
+  height: 600px;
+  width: 375px;
+  object-fit: contain;
+}
 
 /* 共通 */
 * {
