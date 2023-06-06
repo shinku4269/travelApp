@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TravelApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+  <!--　ヘッダー　-->
+  <header class="header">
+    <div class="header_title">
+      <%= link_to "我が家の旅行備忘録", root_path%>
+    </div>
+    <div class="header_menu">
+      <div class="menu_icon">
+        <%= link_to image_tag("techou_open.png", class: 'icon_image'), schedule_path %>
+        <p>Schedule</p>
+      </div>
+      <div class="menu_icon">
+        <%= link_to image_tag("camera_tsukaisute.png", class: 'icon_image'), root_path %>
+        <p>Picture</p>
+      </div>
+      <div class="menu_icon">
+        <%= link_to image_tag("video_camera.png", class: 'icon_image'), root_path %>
+        <p>Movie</p>
+      </div>
+      <div class="menu_icon">
+        <%= link_to image_tag("travel_suitcase04_green.png", class: 'icon_image'), root_path %>
+        <p>Packing</p>
+      </div>
+      <div class="menu_icon">
+        <%= link_to image_tag("bird_aoitori_bluebird.png", class: 'icon_image'), root_path %>
+        <p>Twitter</p>
+      </div>
+    </div>
+  </header>
+    <%= yield %>
+  </body>
+</html>
